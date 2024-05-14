@@ -260,14 +260,25 @@ Baiklah, berikut ini adalah kode lengkap JavaScript untuk mengelola keranjang be
 
   <script>
     function redirectToWhatsApp() {
-        var nomorWhatsApp = "6282162037203"; // Nomor WhatsApp Anda
-        
-        var urlWhatsApp = "https://wa.me/" + nomorWhatsApp;
+        // Nomor WhatsApp Anda
+        var nomorWhatsApp = "6282162037203";
 
+        // Mendapatkan informasi pesanan dari local storage
+        var cart = JSON.parse(localStorage.getItem('cart')) || [];
+        var detailPesanan = "Saya ingin memesan:\n";
+        
+        // Membuat detail pesanan berdasarkan informasi yang diperoleh dari keranjang belanja
+        cart.forEach(function(item) {
+            detailPesanan += item.name + " - " + item.quantity + " x IDR " + item.price + " = IDR " + (item.quantity * item.price) + "\n";
+        });
+
+        // Membuat tautan WhatsApp dengan nomor dan pesan pra-tetap
+        var urlWhatsApp = "https://wa.me/" + nomorWhatsApp + "?text=" + encodeURIComponent(detailPesanan);
+
+        // Mengarahkan pengguna ke aplikasi WhatsApp dengan tautan yang telah dibuat
         window.open(urlWhatsApp);
     }
 </script>
-
   <!-- ======= Vendor JS Files ======= -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
