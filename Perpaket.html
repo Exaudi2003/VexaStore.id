@@ -38,44 +38,53 @@
 
 
   <!-- ======= Header/Navbar ======= -->
-  <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+  <<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
-      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
       <a class="navbar-brand text-brand" href="index.html">VexaStore.id</a>
-
-      <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
-        <ul class="navbar-nav">
-
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarDefault">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" href="index.html">Home</a>
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
           </li>
-
           <li class="nav-item">
-            <a class="nav-link " href="about.html">About</a>
+            <a class="nav-link" href="about.html">About</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Paketan Joki</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item " href="Clasick.html">CLasick</a>
-              <a class="dropdown-item " href="Perbintang.html">Perbintang</a>
-              <a class="dropdown-item " href="Perpaket.html">Perpaket</a>
-              <a class="dropdown-item " href="MCL.html">MCL</a>
-            </div>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Paketan Joki
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="Clasick.html">Clasick</a></li>
+              <li><a class="dropdown-item" href="Perbintang.html">Perbintang</a></li>
+              <li><a class="dropdown-item" href="Perpaket.html">Perpaket</a></li>
+              <li><a class="dropdown-item" href="MCL.html">MCL</a></li>
+            </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="contact.html">Contact</a>
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="cart.html">
+              <i class="fas fa-shopping-cart"></i> <span class="badge bg-secondary" id="cart-count">0</span>
+            </a>
           </li>
         </ul>
       </div>
+    </div>
+  </nav>
+  
 
   
 
     </div>
   </nav><!-- End Header/Navbar -->
+  
   <main id="main">
     <!-- =======Intro Single ======= -->
     <section class="intro-single">

@@ -36,42 +36,46 @@
 
 <body>
 
-  <!-- ======= Header/Navbar ======= -->
-  <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+  <<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
-      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
       <a class="navbar-brand text-brand" href="index.html">VexaStore.id</a>
-
-      <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
-        <ul class="navbar-nav">
-
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarDefault">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" href="index.html">Home</a>
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
           </li>
-
           <li class="nav-item">
-            <a class="nav-link " href="about.html">About</a>
+            <a class="nav-link" href="about.html">About</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Paketan Joki</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item " href="Clasick.html">CLasick</a>
-              <a class="dropdown-item " href="Perbintang.html">Perbintang</a>
-              <a class="dropdown-item " href="Perpaket.html">Perpaket</a>
-              <a class="dropdown-item " href="MCL.html">MCL</a>
-            </div>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Paketan Joki
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="Clasick.html">Clasick</a></li>
+              <li><a class="dropdown-item" href="Perbintang.html">Perbintang</a></li>
+              <li><a class="dropdown-item" href="Perpaket.html">Perpaket</a></li>
+              <li><a class="dropdown-item" href="MCL.html">MCL</a></li>
+            </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="contact.html">Contact</a>
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="cart.html">
+              <i class="fas fa-shopping-cart"></i> <span class="badge bg-secondary" id="cart-count">0</span>
+            </a>
           </li>
         </ul>
       </div>
-
-  
+    </div>
+  </nav>
 
     </div>
   </nav><!-- End Header/Navbar -->
@@ -233,162 +237,78 @@
 
   </main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
-  <section class="section-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-md-4">
-          <div class="widget-a">
-            <div class="w-header-a">
-              <h3 class="w-title-a text-brand">EstateAgency</h3>
-            </div>
-            <div class="w-body-a">
-              <p class="w-text-a color-text-a">
-                Enim minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip exea commodo consequat duis
-                sed aute irure.
-              </p>
-            </div>
-            <div class="w-footer-a">
-              <ul class="list-unstyled">
-                <li class="color-a">
-                  <span class="color-text-a">Phone .</span> contact@example.com
-                </li>
-                <li class="color-a">
-                  <span class="color-text-a">Email .</span> +54 356 945234
-                </li>
-              </ul>
-            </div>
+ <!-- ======= Footer ======= -->
+ <section class="section-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-4">
+        <div class="widget-a">
+          <div class="w-header-a">
+            <h3 class="w-title-a text-brand">VexaStore.id</h3>
           </div>
-        </div>
-        <div class="col-sm-12 col-md-4 section-md-t3">
-          <div class="widget-a">
-            <div class="w-header-a">
-              <h3 class="w-title-a text-brand">The Company</h3>
-            </div>
-            <div class="w-body-a">
-              <div class="w-body-a">
-                <ul class="list-unstyled">
-                  <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Site Map</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Legal</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Agent Admin</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Careers</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Affiliate</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Privacy Policy</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-4 section-md-t3">
-          <div class="widget-a">
-            <div class="w-header-a">
-              <h3 class="w-title-a text-brand">International sites</h3>
-            </div>
-            <div class="w-body-a">
-              <ul class="list-unstyled">
-                <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#">Venezuela</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#">China</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#">Hong Kong</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#">Argentina</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#">Singapore</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#">Philippines</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <nav class="nav-footer">
-            <ul class="list-inline">
-              <li class="list-inline-item">
-                <a href="#">Home</a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">About</a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">Property</a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">Blog</a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">Contact</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="socials-a">
-            <ul class="list-inline">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="bi bi-facebook" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="bi bi-twitter" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="bi bi-instagram" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="bi bi-linkedin" aria-hidden="true"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="copyright-footer">
-            <p class="copyright color-text-a">
-              &copy; Copyright
-              <span class="color-a">EstateAgency</span> All Rights Reserved.
+          <div class="w-body-a">
+            <p class="w-text-a color-text-a">
+              Jasa Joki Booster rank Mobile Legends Bang Bang
             </p>
           </div>
-          <div class="credits">
-            <!--
-            All the links in the footer should remain intact.
-            You can delete the links only if you purchased the pro version.
-            Licensing information: https://bootstrapmade.com/license/
-            Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=EstateAgency
-          -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          <div class="w-footer-a">
+            <ul class="list-unstyled">
+              <li class="color-a">
+                <span class="color-text-a">Phone .</span> 082162037203
+              </li>
+              <li class="color-a">
+                <span class="color-text-a">Email .</span> exaudisiregar08@gmail.com
+              </li>
+            </ul>
           </div>
         </div>
       </div>
+      
+</section>
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <nav class="nav-footer">
+          <ul class="list-inline">
+            <li class="list-inline-item">
+              <a href="#">Home</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">About</a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="socials-a">
+          <ul class="list-inline">
+            <li class="list-inline-item">
+              <a href="https://wa.me/6282162037203">
+                <i class="bi bi-whatsapp" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.instagram.com/vexastore.id/">
+                <i class="bi bi-instagram" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="copyright-footer">
+          <p class="copyright color-text-a">
+            &copy; Copyright
+            <span class="color-a">VexaStore.id</span> All Rights Reserved.
+          </p>
+        </div>
+        <div class="credits">
+          Designed by <a href="https://www.linkedin.com/in/exaudi-siregar-j080103/">Exaudi Siregar</a>
+        </div>
+      </div>
     </div>
-  </footer><!-- End  Footer -->
+  </div>
+</footer><!-- End  Footer -->
 
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

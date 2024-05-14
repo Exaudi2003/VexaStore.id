@@ -1,30 +1,18 @@
+Baiklah, berikut ini adalah kode lengkap JavaScript untuk mengelola keranjang belanja:
+
+### `cart.html`:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>VexaStore.id</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart - VexaStore.id</title>
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -70,17 +58,22 @@
       </div>
     </div>
   </nav>
+  
+
+  
+
     </div>
   </nav><!-- End Header/Navbar -->
+
   <main id="main">
+
     <!-- ======= Intro Single ======= -->
     <section class="intro-single">
       <div class="container">
         <div class="row">
           <div class="col-md-12 col-lg-8">
             <div class="title-single-box">
-              <h1 class="title-single">JOKI UP WR</h1>
-              <span class="color-text-a">CLASICK</span>
+              <h1 class="title-single">Shopping Cart</h1>
             </div>
           </div>
           <div class="col-md-12 col-lg-4">
@@ -89,11 +82,8 @@
                 <li class="breadcrumb-item">
                   <a href="index.html">Home</a>
                 </li>
-                <li class="breadcrumb-item">
-                  <a href="Clasick.html">Clasick</a>
-                </li>
                 <li class="breadcrumb-item active" aria-current="page">
-                  VexaStore.id
+                  Cart
                 </li>
               </ol>
             </nav>
@@ -102,58 +92,43 @@
       </div>
     </section><!-- End Intro Single-->
 
-    <!-- ======= Property Single ======= -->
-    <section class="property-single nav-arrow-b">
+    <!-- ======= Cart Section ======= -->
+    <section class="property-grid grid">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12">
-            <div class="row justify-content-between">
-              <div class="col-md-4 col-lg-4">
-                <div class="property-price d-flex justify-content-center foo">
-                  <div class="card-header-c d-flex">
-                    <div class="card-box-ico">
-                      <span class="bi bi-cash">IDR</span>
-                    </div>
-                    <div class="card-title-c align-self-center">
-                      <h5 class="title-c">7000</h5>
-                    </div>
-                  </div>
-                </div>
+          <div class="col-md-12">
+            <div class="card-header-c d-flex">
+              <div class="card-title-c align-self-center">
+                <h2 class="title-c">Your Cart</h2>
               </div>
-              <div class="col-md-7 col-lg-7 section-md-t3">
-                <div class="row">
-                  <div class="col-sm-12">
-                    <div class="title-box-d">
-                      <h3 class="title-d">JOKI UP WINRATE</h3>
-                    </div>
-                  </div>
-                </div>
-                <div class="property-description">
-                  <p class="description color-text-a">
-                    Ayo tingkatkan Winrate hero favorit kamu dengan Mengorder joki up Winrate, dijamin Winrate hero favorit kamu
-                    akan naik, dan mendapatkan winrate yang bagus.  
-                  </p>
-                </div>
-                <!-- New Section for Quantity and Add to Cart -->
-                <div class="row section-t3">
-                  <div class="col-sm-12">
-                    <div class="title-box-d">
-                      <h3 class="title-d">Order Now</h3>
-                    </div>
-                    <div class="quantity-input">
-                      <label for="quantity" class="form-label">Quantity:</label>
-                      <input type="number" id="quantity" name="quantity" value="1" min="1" class="form-control" style="width: 100px; display: inline-block; margin-right: 10px;">
-                      <button type="button" class="btn btn-a" onclick="addToCart('JOKI UP WINRATE', 7000)">Add to Cart</button>
-                    </div>
-                  </div>
-                </div>
-                <!-- End of New Section -->
-              </div>
+            </div>
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Product</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody id="cart-items">
+                  <!-- Items will be dynamically added here -->
+                </tbody>
+              </table>
+            </div>
+            <div class="d-flex justify-content-end">
+              <h3 id="cart-total">Total: IDR 0</h3>
+            </div>
+            <div class="d-flex justify-content-end">
+              <button class="btn btn-success">Checkout</button>
             </div>
           </div>
         </div>
       </div>
-    </section><!-- End Property Single -->
+    </section><!-- End Cart Section-->
+
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -183,7 +158,6 @@
           </div>
         </div>
       </div>
-    </div>
   </section>
   <footer>
     <div class="container">
@@ -219,11 +193,11 @@
           <div class="copyright-footer">
             <p class="copyright color-text-a">
               &copy; Copyright
-              <span class="color-a">VexaStore.id</span>. All Rights Reserved.
+              <span class="color-a">VexaStore.id</span> All Rights Reserved.
             </p>
           </div>
           <div class="credits">
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            Designed by <a href="https://www.linkedin.com/in/exaudi-siregar-j080103/">Exaudi Siregar</a>
           </div>
         </div>
       </div>
@@ -232,30 +206,66 @@
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-  
-  <!-- Add to Cart JavaScript -->
+  <!-- ======= JavaScript for Cart ======= -->
   <script>
-    function addToCart(productName, productPrice) {
-      const quantity = document.getElementById('quantity').value;
-      const cartItem = {
-        name: productName,
-        price: productPrice,
-        quantity: parseInt(quantity, 10)
-      };
+    function addToCart() {
+      const quantity = parseInt(document.getElementById('quantity').value);
+      const productName = "JOKI UP WR CLASICK";
+      const productPrice = 7000;
 
       let cart = JSON.parse(localStorage.getItem('cart')) || [];
-      cart.push(cartItem);
+      const existingProductIndex = cart.findIndex(item => item.name === productName);
+
+      if (existingProductIndex > -1) {
+        cart[existingProductIndex].quantity += quantity;
+      } else {
+        cart.push({ name: productName, price: productPrice, quantity: quantity });
+      }
+
       localStorage.setItem('cart', JSON.stringify(cart));
-      alert(`${quantity} ${productName}(s) added to cart.`);
+      alert('Product added to cart!');
     }
+
+    function loadCart() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const cartItemsContainer = document.getElementById('cart-items');
+      let total = 0;
+
+      cartItemsContainer.innerHTML = '';
+
+      cart.forEach(item => {
+        const itemTotal = item.price * item.quantity;
+        total += itemTotal;
+
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${item.name}</td>
+          <td>IDR ${item.price}</td>
+          <td>${item.quantity}</td>
+          <td>IDR ${itemTotal}</td>
+          <td><button class="btn btn-danger btn-sm" onclick="removeFromCart('${item.name}')">Remove</button></td>
+        `;
+        cartItemsContainer.appendChild(row);
+      });
+
+      document.getElementById('cart-total').innerText = `Total: IDR ${total}`;
+    }
+
+    function removeFromCart(productName) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart = cart.filter(item => item.name !== productName);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      loadCart();
+    }
+
+    document.addEventListener('DOMContentLoaded', loadCart);
   </script>
 
+  <!-- ======= Vendor JS Files ======= -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
 </body>
+
 </html>
 
+     
