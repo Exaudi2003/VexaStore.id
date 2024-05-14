@@ -246,7 +246,7 @@
       const cartItem = {
         name: productName,
         price: productPrice,
-        quantity: parseInt(quantity, 10)
+        quantity: parseInt(quantity, 100)
       };
 
       let cart = JSON.parse(localStorage.getItem('cart')) || [];

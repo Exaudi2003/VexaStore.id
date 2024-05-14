@@ -58,9 +58,6 @@ Baiklah, berikut ini adalah kode lengkap JavaScript untuk mengelola keranjang be
       </div>
     </div>
   </nav>
-  
-
-  
 
     </div>
   </nav><!-- End Header/Navbar -->
@@ -122,7 +119,7 @@ Baiklah, berikut ini adalah kode lengkap JavaScript untuk mengelola keranjang be
               <h3 id="cart-total">Total: IDR 0</h3>
             </div>
             <div class="d-flex justify-content-end">
-              <button class="btn btn-success">Checkout</button>
+              <button class="btn btn-success" onclick="redirectToWhatsApp()">Checkout</button>
             </div>
           </div>
         </div>
@@ -260,6 +257,16 @@ Baiklah, berikut ini adalah kode lengkap JavaScript untuk mengelola keranjang be
 
     document.addEventListener('DOMContentLoaded', loadCart);
   </script>
+
+  <script>
+    function redirectToWhatsApp() {
+        var nomorWhatsApp = "6282162037203"; // Nomor WhatsApp Anda
+        
+        var urlWhatsApp = "https://wa.me/" + nomorWhatsApp;
+
+        window.open(urlWhatsApp);
+    }
+</script>
 
   <!-- ======= Vendor JS Files ======= -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
